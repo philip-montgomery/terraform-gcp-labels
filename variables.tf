@@ -7,12 +7,12 @@ variable "ccoe_version" {
 }
 
 variable "app" {
-  description = "(Optional) Application associated with service"
+  description = "Application associated with service"
   default = ""
 }
 
 variable "business_owner" {
-  description = "(Required) Business owner associated with resource/service."
+  description = "Business owner associated with resource/service."
 }
 
 variable "classification" {
@@ -21,7 +21,8 @@ variable "classification" {
 }
 
 variable "env" {
-  description = "(Required) Environment resource is located on; expected level of impact"
+  description = "(Required, but is expected to be set in project configs along with project name variables). Environment resource is located on; expected level of impact"
+  default = ""
 }
 
 variable "game" {
@@ -31,22 +32,24 @@ variable "game" {
 
 variable "partner" {
   description = "(Required on game projects/resources) Provides aggregate reporting for sutdios having multiple games"
+  default = ""
 }
 
 variable "state" {
-  description = "(Optional) Aides in auditing projects/resources in use to limit stale workloads. Values: Offline, archive, deprecated, migration"
+  description = "Aides in auditing projects/resources in use to limit stale workloads. Values: Offline, archive, deprecated, migration"
   default = ""
 }
 
 variable "studio" {
   description = "(Required if team is not assigned; otherwise, optional) Provides aggregate reporting for business units having multiple studios."
+  default = ""
 }
 
 variable "team" {
-  description = "(Required) Team actively using project/resources"
+  description = "Team actively using project/resources"
 }
 
 variable "technical_owner" {
-  description = "(Required) Full name of the Project technical owner(s)."
+  description = "Full name of the Project technical owner(s)."
 }
 
