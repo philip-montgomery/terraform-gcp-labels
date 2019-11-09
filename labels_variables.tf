@@ -53,3 +53,9 @@ variable "technical_owner" {
   description = "Full name of the Project technical owner(s)."
 }
 
+variable "dependencies" {
+  description = "List of optional dependencies" 
+  type    = "list"
+  default = []
+}
+

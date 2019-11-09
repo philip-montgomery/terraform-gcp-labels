@@ -14,3 +14,7 @@ output "labels" {
   }
   description = "Labels used per CCOE"
 }
+
+output "depended_on" {
+  value = "${null_resource.dependency_setter.id}"
+}
