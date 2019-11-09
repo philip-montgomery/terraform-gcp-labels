@@ -8,6 +8,5 @@ resource "null_resource" "dependency_getter" {
 
 resource "null_resource" "dependency_setter" {
   depends_on = [
-    "output.labels",
   ]
 }
